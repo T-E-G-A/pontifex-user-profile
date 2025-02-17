@@ -1,54 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@700&display=swap');
+
+:root {
+  --primary-font: 'Poppins', sans-serif;
+  --heading-font: 'Raleway', sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+  background: #f0f2f5;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  color: #1a1a1a;
+}
+
 .applications {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    background-color: #f3f4f6;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #f3f4f6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.card h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+.pending {
+  color: #f59e0b;
+}
+
+.approved {
+  color: #10b981;
+}
+
+.application-button {
+  padding: 0.75rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.application-button:hover {
+  background-color: #1e4bb5;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
   .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   }
-  
-  .card {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-  }
-  
+
   .card h4 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
   }
-  
+
   .card p {
-    font-size: 1rem;
-    color: #4a5568;
+    font-size: 0.95rem;
   }
-  
-  .pending {
-    color: #f59e0b;
-  }
-  
-  .approved {
-    color: #10b981;
-  }
-  
+
   .application-button {
-    padding: 0.75rem;
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.2s;
+    font-size: 0.95rem;
   }
-  
-  .application-button:hover {
-    background-color: #1e4bb5;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
+
+  .card h4 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .application-button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .card h4 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .application-button {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .card h4 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+
+  .application-button {
+    font-size: 0.8rem;
+  }
+}

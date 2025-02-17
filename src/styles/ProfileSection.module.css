@@ -1,82 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@700&display=swap');
+
+:root {
+  --primary-font: 'Poppins', sans-serif;
+  --heading-font: 'Raleway', sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+  background: #f0f2f5;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  color: #1a1a1a;
+}
+
 .profileCard {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.section textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.section textarea:focus {
+  border-color: #2563eb;
+}
+
+.skillsInput {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.skillsInput input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.skillsInput input:focus {
+  border-color: #2563eb;
+}
+
+.skillsInput button {
+  padding: 0.75rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.skillsInput button:hover {
+  background-color: #1e4bb5;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skillTag {
+  background-color: #e2e8f0;
+  color: #2d3748;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .profileCard {
+    padding: 1.75rem;
   }
-  
-  .section {
-    margin-bottom: 1.5rem;
-  }
-  
+
   .section label {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #4a5568;
-    margin-bottom: 0.5rem;
-    display: block;
+    font-size: 0.95rem;
   }
-  
+
   .section textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.2s;
+    font-size: 0.95rem;
   }
-  
-  .section textarea:focus {
-    border-color: #2563eb;
-  }
-  
-  .skillsInput {
-    display: flex;
-    gap: 0.5rem;
-  }
-  
+
   .skillsInput input {
-    flex: 1;
-    padding: 0.75rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.2s;
+    font-size: 0.95rem;
   }
-  
-  .skillsInput input:focus {
-    border-color: #2563eb;
-  }
-  
+
   .skillsInput button {
-    padding: 0.75rem 1rem;
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
+    font-size: 0.95rem;
   }
-  
-  .skillsInput button:hover {
-    background-color: #1e4bb5;
-  }
-  
-  .skillsList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  
+
   .skillTag {
-    background-color: #e2e8f0;
-    color: #2d3748;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
+}
+
+@media (max-width: 992px) {
+  .profileCard {
+    padding: 1.5rem;
+  }
+
+  .section label {
+    font-size: 0.9rem;
+  }
+
+  .section textarea {
+    font-size: 0.9rem;
+  }
+
+  .skillsInput input {
+    font-size: 0.9rem;
+  }
+
+  .skillsInput button {
+    font-size: 0.9rem;
+  }
+
+  .skillTag {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .profileCard {
+    padding: 1.25rem;
+  }
+
+  .section label {
+    font-size: 0.85rem;
+  }
+
+  .section textarea {
+    font-size: 0.85rem;
+  }
+
+  .skillsInput input {
+    font-size: 0.85rem;
+  }
+
+  .skillsInput button {
+    font-size: 0.85rem;
+  }
+
+  .skillTag {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .profileCard {
+    padding: 1rem;
+  }
+
+  .section label {
+    font-size: 0.8rem;
+  }
+
+  .section textarea {
+    font-size: 0.8rem;
+  }
+
+  .skillsInput input {
+    font-size: 0.8rem;
+  }
+
+  .skillsInput button {
+    font-size: 0.8rem;
+  }
+
+  .skillTag {
+    font-size: 0.8rem;
+  }
+}

@@ -1,37 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@700&display=swap');
+
+:root {
+  --primary-font: 'Poppins', sans-serif;
+  --heading-font: 'Raleway', sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+  background: #f0f2f5;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  color: #1a1a1a;
+}
+
 .navbar {
-    background: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding: 1rem 0;
-  }
-  
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+.link {
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #2563eb;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
   }
-  
+
   .logo {
-    font-family: var(--heading-font);
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: #2563eb;
-    text-decoration: none;
+    font-size: 1.4rem;
   }
-  
+
   .links {
-    display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
   }
-  
+
   .link {
-    color: #4b5563;
-    text-decoration: none;
-    transition: color 0.2s;
+    font-size: 0.95rem;
   }
-  
-  .link:hover {
-    color: #2563eb;
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 1rem;
   }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .links {
+    gap: 1rem;
+  }
+
+  .link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .link {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 0.25rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .links {
+    gap: 0.25rem;
+  }
+
+  .link {
+    font-size: 0.8rem;
+  }
+}

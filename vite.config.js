@@ -1,7 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// filepath: /C:/Users/edwar/Downloads/pontifex-user-profile/vite.config.js
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  base: '/pontifex-user-profile/',
+  plugins: [react()]
+});

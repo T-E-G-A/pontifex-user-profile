@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@700&display=swap');
+
+:root {
+  --primary-font: 'Poppins', sans-serif;
+  --heading-font: 'Raleway', sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+  background: #f0f2f5;
+}
+
+h1, h2, h3 {
+  font-family: var(--heading-font);
+  color: #1a1a1a;
+}
